@@ -1,0 +1,143 @@
+.popup {
+  display: block;
+  opacity: 0;
+  overflow-y: scroll;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  z-index: 10000;
+  padding-top: 40px;
+  background: $popup-back;
+  text-align: center;
+  transition: opacity 500ms ease-in-out;
+
+  &_opened {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+  }
+
+  &_hide {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__wrap {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+
+  &__content {
+    display: none;
+    padding: 38px 20px 66px;
+    border-radius: 10px;
+    background-color: #ebebeb;
+    @include main-font1;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: center;
+    color: #999;
+
+    &-title{
+      margin-bottom: 3px;
+      font-size: 32px;
+      font-weight: 300;
+      line-height: 42px;
+      color: #3e3e3e;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+  }
+
+  &__form{
+    padding-top: 25px;
+
+    fieldset{
+      position: relative;
+      width: 100%;
+      max-width: 395px;
+      margin: 0 auto 10px;
+    }
+
+    input{
+      width: 100%;
+      height: 40px;
+      padding: 0 12px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      @include main-font1;
+      font-size: 14px;
+      font-weight: 300;
+      transition: border-color .3s ease;
+      -webkit-transition: border-color .3s ease;
+
+      &:focus{
+        border-color: #18baea;
+      }
+
+      &.novalid{
+        border-color: #ff6353;
+      }
+
+    }
+
+  }
+
+  &__close {
+    position: absolute;
+    top: 17px;
+    width: 20px;
+    height: 20px;
+    right: 18px;
+    text-indent: -5000px;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+    cursor: pointer;
+
+    &:after,
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: #3e3e3e;
+      transform-origin: center;
+      content: '';
+    }
+
+    &:after{
+      transform: translateY( 50% ) rotate( 45deg );
+    }
+
+    &:before {
+      transform: translateY( 50% ) rotate( -45deg );
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      background-position: 0 bottom;
+    }
+  }
+
+  &__scrollbar-measure {
+    overflow: scroll;
+    position: absolute;
+    top: -9999px;
+    width: 100px;
+    height: 100px;
+  }
+
+}

@@ -1,0 +1,135 @@
+
+.blog {
+  padding: 50px 0;
+
+  &__item {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0, .0);
+    padding: 36px 30px 10px 30px;
+    background: #fff;
+    -webkit-transition: box-shadow .2s ease-in-out;
+    transition: box-shadow .2s ease-in-out;
+
+    &:hover {
+      box-shadow: -5px 5px 10px rgba(0,0,0, .1);
+    }
+  }
+  &__item-pic {
+    height: 40vw;
+    margin-bottom: 40px;
+    background-position: center;
+    background-size: cover;
+  }
+  &__item-title {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 14px;
+    font-weight: 400;
+    color: #333;
+  }
+  &__item-article {
+    overflow: hidden;
+    height: 72px;
+    margin-bottom: 35px;
+    padding-left: 4px;
+    font-size: 15px;
+    line-height: 24px;
+    color: #323333;
+  }
+  &__item-time {
+    padding-left: 3px;
+    font-size: 13px;
+    line-height: 24px;
+    color: #b2b2b2;
+
+    &_today {
+      color: #18baea;
+    }
+  }
+  &__bnt-more {
+    display: inline-block;
+    min-width: 223px;
+    margin-bottom: 29px;
+    background: #dbdddf;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 52px;
+    color: #010101;
+    text-align: center;
+    -webkit-transition: background .2s ease-in-out;
+    transition: background .2s ease-in-out;
+
+    &:after {
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      width: 15px;
+      height: 3px;
+      margin-left: 4px;
+      background: url(../img/more-icon.png) no-repeat;
+      background-size: contain;
+      content: '';
+    }
+    &:hover {
+      background: #bbbdbe;
+    }
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .blog {
+    padding: 100px 0 215px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__list {
+      display: inline-block;
+      vertical-align: top;
+      width: 65%;
+      max-width: 628px;
+    }
+    &__item {
+      padding: 36px 30px 10px 252px;
+    }
+    &__item-pic {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 223px;
+      height: 100%;
+    }
+    &__bnt-more {
+      margin-top: 29px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .blog {
+
+    &__list {
+      width: 70%;
+    }
+    &__item {
+      position: relative;
+      display: block;
+      margin-bottom: 30px;
+      box-shadow: 0 5px 10px rgba(0,0,0, .0);
+      padding: 36px 30px 10px 252px;
+      background: #fff;
+      -webkit-transition: box-shadow .2s ease-in-out;
+      transition: box-shadow .2s ease-in-out;
+
+      &:hover {
+        box-shadow: -5px 5px 10px rgba(0,0,0, .1);
+      }
+    }
+  }
+}
+

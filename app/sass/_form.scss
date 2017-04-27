@@ -1,0 +1,161 @@
+.form {
+  position: relative;
+  margin-bottom: 35px;
+  padding: 25px 20px 0;
+  color: #999;
+  font-size: 14px;
+  text-align: center;
+
+  &__wrap{
+    max-width: 800px;
+    margin: 0 auto;
+
+    textarea{
+      display: block;
+      height: 100%;
+      padding: 12px;
+      min-height: 100px;
+    }
+
+  }
+
+  &__title{
+    margin-bottom: 22px;
+    line-height: 22px;
+
+    h2{
+      color: #1a1a1a;
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 32px;
+    }
+
+  }
+
+  &__inputs{
+    width: 100%;
+    max-width: 395px;
+    margin: 0 auto;
+
+    fieldset{
+      margin-bottom: 10px;
+    }
+
+    input{
+      height: 40px;
+      padding: 0 12px;
+    }
+
+  }
+
+  &__btn-wrap{
+    width: 100%;
+    padding-top: 20px;
+  }
+
+  &__thanks{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ebebeb;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .3s ease, opacity .3s ease;
+    -webkit-transition: visibility .3s ease, opacity .3s ease;
+
+    &.visible{
+      opacity: 1;
+      visibility: visible;
+    }
+
+  }
+
+  fieldset{
+    position: relative;
+    width: 100%;
+    max-width: 395px;
+    margin: 0 auto 10px;
+  }
+
+  input, textarea{
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    @include main-font1;
+    font-size: 14px;
+    font-weight: 300;
+    transition: border-color .3s ease;
+    -webkit-transition: border-color .3s ease;
+
+    &:focus{
+      border-color: #18baea;
+    }
+    
+    &.novalid{
+      border-color: #ff6353;
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .form {
+    margin-bottom: 85px;
+    padding: 57px 0 0;
+
+    &__title{
+      margin-bottom: 37px;
+
+      h2{
+        font-size: 32px;
+        line-height: 42px;
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-landscape) {
+
+  .form {
+
+    fieldset{
+      width: 50%;
+      margin: 0 0 10px;
+    }
+
+    textarea{
+      min-height: 140px;
+    }
+
+    &__wrap{
+      display: flex;
+      flex-flow: wrap row;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    &__inputs{
+      width: 50%;
+      margin: 0;
+
+      fieldset{
+        width: 100%;
+      }
+
+    }
+
+  }
+
+}

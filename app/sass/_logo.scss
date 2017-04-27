@@ -1,0 +1,59 @@
+.logo {
+  position: absolute;
+  top: 39px;
+  left: 20px;
+  width: 118px;
+
+  img{
+    display: block;
+    width: 100%;
+  }
+  span {
+    position: absolute;
+    display: inline-block;
+    top: -1px;
+    left: 110%;
+    padding-left: 10px;
+    border-left: 1px solid #fff;
+    font-size: 14px;
+    line-height: 26px;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+}
+.site__header_inner {
+
+  .logo {
+    top: 21px;
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .logo{
+    left: 8px;
+
+    span {
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      left: 122%;
+      padding-left: 22px;
+      border-left: 1px solid #fff;
+      font-size: 16px;
+      line-height: 26px;
+      color: #fff;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+  }
+
+  .site__header_inner {
+
+    .logo {
+      top: 21px;
+    }
+  }
+
+}

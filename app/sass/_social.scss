@@ -1,0 +1,63 @@
+.social{
+  padding: 0 0 30px;
+  text-align: center;
+
+  a{
+    display: inline-block;
+    width: 62px;
+    height: 62px;
+    margin-left: 6px;
+    border-radius: 100px;
+    background: url("../img/icons-social.png") no-repeat 0 0 #565c65;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+
+    &:hover{
+      background-color: #696d76;
+    }
+    &.social-vk{
+      background-position: 26px 50%;
+    }
+    &.social-fb{
+      background-position: -46px 50%;
+    }
+    &.social-ok{
+      background-position: -117px 50%;
+    }
+  }
+}
+.social-share {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: $tablet-portrait) {
+
+  .social-share {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    div {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+@media (min-width: $desktop) {
+
+  .social{
+    position: absolute;
+    right: 18px;
+    top: -6px;
+    padding: 0;
+    text-align: left;
+  }
+}
